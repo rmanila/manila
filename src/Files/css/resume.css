@@ -1,0 +1,51 @@
+/* Specific styles for resume.php */
+.resume {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+}
+
+.resume header h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.resume header p {
+  font-size: 1.1em;
+}
+
+.resume .about-me,
+.resume .education,
+.resume .experience,
+.resume .languages,
+.resume .skills {
+  margin-bottom: 20px;
+}
+
+.resume .about-me h2,
+.resume .education h2,
+.resume .experience h2,
+.resume .languages h2,
+.resume .skills h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.resume .skills ul,
+.resume .languages ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.resume .skills li,
+.resume .languages li {
+  margin-bottom: 5px;
+}
+
+.resume footer {
+  margin-top: 20px;
+  text-align: right;
+  font-size: 1.1em;
+}

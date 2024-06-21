@@ -1,0 +1,46 @@
+/* Specific styles for coverpage.php */
+.cover-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+}
+
+.cover-page .address,
+.cover-page .date,
+.cover-page .recipient,
+.cover-page .greeting,
+.cover-page .body-text,
+.cover-page .closing {
+  margin-bottom: 20px;
+}
+
+.cover-page .address {
+  font-size: 1.1em;
+}
+
+.cover-page .date {
+  text-align: right;
+  font-size: 1.1em;
+}
+
+.cover-page .recipient {
+  font-size: 1.1em;
+}
+
+.cover-page .greeting {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.cover-page .body-text {
+  text-indent: 50px;
+  font-size: 1em;
+}
+
+.cover-page .closing {
+  text-align: right;
+  font-size: 1.1em;
+  font-weight: bold;
+}
