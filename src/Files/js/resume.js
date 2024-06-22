@@ -1,4 +1,6 @@
-
+// src/html/CoverPage.js
+import "../css/resume.css";
+const coverPageContent = `
 <div class="resume">
         <header>
             <h1>RICHARD T. MANILA</h1>
@@ -52,3 +54,6 @@
            
         </footer>
     </div>
+`;
+
+export default coverPageContent;

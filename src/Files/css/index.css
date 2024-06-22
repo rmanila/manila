@@ -1,7 +1,53 @@
-/* Specific styles for index.html */
 body {
-  font-family: Arial, sans-serif;
-  margin: 40px;
-  line-height: 1.6;
-  color: #333;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* index.css */
+
+/* Ensure offcanvas menu is positioned correctly */
+.offcanvas {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: auto; /* Ensure it's on the right side */
+  z-index: 1050; /* Bootstrap default z-index for offcanvas */
+  visibility: hidden;
+  background-color: #fff; /* Adjust as per your design */
+  overflow-y: auto; /* Enable vertical scrolling */
+  height: 100%; /* Ensure full height */
+  width: 250px; /* Adjust width as needed */
+  transform: translateX(100%); /* Initially hide offcanvas menu */
+  transition: transform 0.3s ease; /* Smooth transition for animation */
+}
+
+/* Ensure offcanvas menu is visible when open */
+.offcanvas.show {
+  visibility: visible;
+  transform: translateX(0); /* Slide in from right */
+}
+
+/* Ensure main content area shifts when offcanvas menu is open */
+.offcanvas.show + #root {
+  transform: translateX(250px); /* Adjust width of offcanvas menu */
+}
+
+/* Ensure burger menu stays fixed at top and moves with scroll */
+#burger-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Higher than offcanvas to overlay properly */
+  background-color: #fff; /* Adjust background color as needed */
+  padding: 10px; /* Adjust padding as needed */
 }

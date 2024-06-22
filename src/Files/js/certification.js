@@ -1,3 +1,6 @@
+// src/html/CoverPage.js
+import "../css/certification.css";
+const certificationContent = `
 <header>
         <h1>Certification</h1>
     </header>
@@ -13,9 +16,12 @@
         <section class="certificate-proof">
             <h2>Certification Proof</h2>
             <p>Attached is the proof of my HTML/CSS Certiport certification:</p>
-            <img src="../../../public/htmlcss.png" alt="HTML/CSS Certiport Certification Picture" width = "760px">
+            <img src="./htmlcss.png" alt="HTML/CSS Certiport Certification Picture" width = "760px">
         </section>
     </main>
 
     <footer>
     </footer>
+`;
+
+export default certificationContent;

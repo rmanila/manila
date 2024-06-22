@@ -1,17 +1,38 @@
+import coverPageContent from "./Files/js/CoverPage.js";
+import resumeContent from "./Files/js/resume.js";
+import certificationContent from "./Files/js/certification.js";
+import awardContent from "./Files/js/award.js";
+import contentContent from "./Files/js/Contents.js";
 import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
+import ReactDOM from "react-dom";
+import "./Files/css/index.css";
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const routes = {
+  CoverPage: coverPageContent,
+  Resume: resumeContent,
+  Certifications: certificationContent,
+  Award: awardContent,
+  Contents: contentContent,
+  // Add more routes here as needed
+};
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function updateContent() {
+  const hash = window.location.hash.slice(1); // Get the hash part of the URL
+  const content = document.getElementById("main-page");
+
+  if (hash === "" || !routes[hash]) {
+    // Load default main page content if no hash is present or the hash is invalid
+    content.innerHTML = `<h2>Welcome to My Portfolio</h2>
+                         <p>This is the main page of the portfolio. Navigate through the menu to explore more.</p>`;
+  } else {
+    // Load the content for the route
+    content.innerHTML = routes[hash];
+  }
+}
+
+// Initial page load or hash change event
+window.addEventListener("load", updateContent);
+window.addEventListener("hashchange", updateContent);
+
+ReactDOM.render(<App />, document.getElementById("root"));

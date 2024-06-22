@@ -1,3 +1,6 @@
+// src/html/CoverPage.js
+import "../css/award.css";
+const awardContent = `
 <header>
         <h1>Awards</h1>
     </header>
@@ -12,7 +15,10 @@
                 <li><strong>Region 11 Computer Assisted Learning – Computer Servicing System – 1st Runner up</strong><br>2015</li>
                 <li><strong>National Computer Assisted Learning – Computer Servicing System – Top 22</strong><br>2016</li>
             </ul>
-            <img src="../../../public/finals1.jpg" width="400px"  alt="CAL Competition Award 2">
-            <img src="../../../public/finals.jpg" width="300px" alt="CAL Competition Award 1">
+            <img src="./finals1.jpg" width="400px"  alt="CAL Competition Award 2">
+            <img src="./finals.jpg" width="300px" alt="CAL Competition Award 1">
         </section>
     </main>
+`;
+
+export default awardContent;
